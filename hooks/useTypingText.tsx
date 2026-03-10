@@ -14,7 +14,7 @@ export const useTypingText = (entryText: string): { textToShow: string; isTyping
     }, 40);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [entryText]);
 
   return { textToShow, isTypingDone: entryText === textToShow };
 };
